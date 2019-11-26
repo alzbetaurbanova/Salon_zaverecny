@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Salon_zaverecny.Models;
 
 namespace Salon_zaverecny.Data
 {
@@ -12,5 +13,6 @@ namespace Salon_zaverecny.Data
             : base(options)
         {
         }
+        public DbSet<Salon_zaverecny.Models.Kadernictvo> Kadernictvo { get; set; }
     }
 }
