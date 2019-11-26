@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Salon_zaverecny.Data;
 
 namespace Salon_zaverecny.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191126103504_Masazs")]
+    partial class Masazs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -220,9 +222,6 @@ namespace Salon_zaverecny.Data.Migrations
                 });
 
             modelBuilder.Entity("Salon_zaverecny.Models.Masaz", b =>
-
-            modelBuilder.Entity("Salon_zaverecny.Models.Kozmetika", b =>
-
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -249,11 +248,7 @@ namespace Salon_zaverecny.Data.Migrations
 
                     b.HasKey("ID");
 
-
                     b.ToTable("Masaz");
-
-                    b.ToTable("Kozmetika");
-
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
