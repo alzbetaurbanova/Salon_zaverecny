@@ -13,6 +13,12 @@ namespace Salon_zaverecny.Data
             : base(options)
         {
         }
+
         public DbSet<Salon_zaverecny.Models.Kadernictvo> Kadernictvo { get; set; }
+
+        public DbSet<Salon_zaverecny.Models.Masaz> Masaz { get; set; }
+
+        public DbSet<Salon_zaverecny.Models.Kozmetika> Kozmetika { get; set; }
+
     }
 }
