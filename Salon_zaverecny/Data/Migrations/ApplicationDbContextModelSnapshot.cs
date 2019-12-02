@@ -262,7 +262,7 @@ namespace Salon_zaverecny.Data.Migrations
                     b.ToTable("Kozmetika");
 
 
-                });
+                })));
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
