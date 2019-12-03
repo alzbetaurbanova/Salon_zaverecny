@@ -262,6 +262,7 @@ namespace Salon_zaverecny.Data.Migrations
                 }
                 )));
 
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
