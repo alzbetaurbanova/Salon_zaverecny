@@ -27,6 +27,19 @@ namespace Salon_zaverecny.Controllers
         {
             return View();
         }
+        public IActionResult Galeria()
+        {
+            return View();
+        }
+        public IActionResult Onas()
+        {
+            return View();
+        }
+        public IActionResult Podakovanie()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
