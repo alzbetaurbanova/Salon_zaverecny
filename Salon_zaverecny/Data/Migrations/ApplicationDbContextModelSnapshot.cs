@@ -256,13 +256,12 @@ namespace Salon_zaverecny.Data.Migrations
 
                     b.ToTable("Kadernictvo");
 
-
                     b.ToTable("Masaz");
 
                     b.ToTable("Kozmetika");
+                }
+                )));
 
-
-                })));
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
