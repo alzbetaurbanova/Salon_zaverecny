@@ -3,31 +3,38 @@
     ViewData["Title"] = "Vzhlad";
 }
 
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th scope="col">Ponuka</th>
-            <th scope="col">Cena</th>
-            
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
+    <div class="card mb-3" style="max-width: 1000px;">
+        <div class="row no-gutters">
+            <div class="col-md-5">
+                <img src="..\uploads/images/makeup2.jpg" class="card-img-top" alt="Kozmetika">
+            </div>
+            <div class="col-md-7">
+                <div class="card-body">
+                    <p class="card-text"><table class="table table-hover">
+             <thead>
+                 <tr>
+                 <th scope="col">Ponuka</th>
+                 <th scope="col">Cena</th>
+
+                 </tr>
+             </thead>
+             <tbody>
+             <tr>
             <th scope="row">Ošetrenie pleti</th>
             <td>10€ - 20€</td>
-        </tr>
-        <tr>
+            </tr>
+            <tr>
             <th scope="row">Čistenie pleti</th>
             <td>15€ - 20€</td>
-        </tr>
-        <tr>
+            </tr>
+            <tr>
             <th scope="row">Vytrhanie obočia</th>
             <td>3€ - 5€</td>
-        </tr>
-        <tr>
+            </tr>
+            <tr>
             <th scope="row">Farbenie obočia</th>
             <td>5€ - 7€</td>
-        </tr>
+           </tr>
         <tr>
             <th scope="row">3D mihalnice</th>
             <td>10€ - 15€</td>
@@ -53,7 +60,16 @@
             <td>15€ - 20€</td>
         </tr>
 
-    </tbody>
-</table>
-<button type="button" class="btn btn-secondary btn-lg btn-block">Objednať</button>
-
+         </tbody>
+        </table></p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <a type="button" class="btn btn-primary" asp-area="" asp-controller="Kozmetikas" asp-action="Formular">Objednať</a>
+        </div>
+    </div>
