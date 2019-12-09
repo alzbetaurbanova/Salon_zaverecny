@@ -49,6 +49,21 @@ namespace Salon_zaverecny.Controllers
             return View();
         }
 
+        public IActionResult Vzhlad()
+        {
+            return View();
+        }
+
+        public IActionResult Podakovanie()
+        {
+            return View();
+        }
+
+        public IActionResult Formular()
+        {
+            return View();
+        }
+
         // POST: Masazs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
