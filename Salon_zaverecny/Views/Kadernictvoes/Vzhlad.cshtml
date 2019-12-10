@@ -5,68 +5,90 @@
 }
 
 
+<div class="card mb-3" style="max-width: 1000px;">
+    <div class="row no-gutters">
+        <div class="col-md-5">
+            <img src="..\uploads/images/noznice.jpg" class="card-img-top" alt="Kadernictvo">
+        </div>
+        <div class="col-md-7">
+            <div class="card-body">
+                <p class="card-text">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Ponuka</th>
+                                <th scope="col">Cena</th>
 
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th scope="col">Ponuka</th>
-            <th scope="col">Cena</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Dámsky strih</th>
+                                <td>5-20€</td>
 
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">Dámsky strih</th>
-            <td>5-20€</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Pánsky strih</th>
+                                <td>5-10€</td>
 
-        </tr>
-        <tr>
-            <th scope="row">Pánsky strih</th>
-            <td>5-10€</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Detský strih</th>
+                                <td colspan="2">5-10€</td>
 
-        </tr>
-        <tr>
-            <th scope="row">Detský strih</th>
-            <td colspan="2">5-10€</td>
+                            </tr>
 
-        </tr>
+                            <tr>
+                                <th scope="row">Farbenie</th>
+                                <td>20-50€</td>
 
-        <tr>
-            <th scope="row">Farbenie</th>
-            <td>20-50€</td>
+                            </tr>
 
-        </tr>
-
-        <tr>
-            <th scope="row">Melír</th>
-            <td>20-50€</td>
-        </tr>
-
-
-        <tr>
-            <th scope="row">Svadobný účes</th>
-            <td>30-50€</td>
-        </tr>
-
-
-        <tr>
-            <th scope="row">Spoločenský účes</th>
-            <td>10-50€</td>
-        </tr>
-
-        <tr>
-            <th scope="row">Predlžovanie vlasov</th>
-            <td>50-100€</td>
-        </tr>
-
-        <tr>
-            <th scope="row">Zahusťovanie vlasov</th>
-            <td>50- 100€</td>
-        </tr>
+                            <tr>
+                                <th scope="row">Melír</th>
+                                <td>20-50€</td>
+                            </tr>
 
 
-    </tbody>
-</table>
+                            <tr>
+                                <th scope="row">Svadobný účes</th>
+                                <td>30-50€</td>
+                            </tr>
 
+
+                            <tr>
+                                <th scope="row">Spoločenský účes</th>
+                                <td>10-50€</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Predlžovanie vlasov</th>
+                                <td>50-100€</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Zahusťovanie vlasov</th>
+                                <td>50- 100€</td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <a type="button" class="btn btn-primary" asp-area="" asp-controller="Kadernictvoes" asp-action="Formular">Objednať</a>
+    </div>
+</div>
+
+
+
+@* iné typy button
 <a typeof="button" asp-area="" asp-controller="Kadernictvoes" asp-action="Formular" type="submit" class="btn btn-primary"> Objednať </a>
-@*<button type="button" class="btn btn-secondary btn-lg btn-block">Objednať</button>*@
+<button type="button" class="btn btn-secondary btn-lg btn-block">Objednať</button>*@
