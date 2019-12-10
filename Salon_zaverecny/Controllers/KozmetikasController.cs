@@ -72,14 +72,16 @@ namespace Salon_zaverecny.Controllers
             string meno = (values["meno"]);
             string priezvisko = (values["priezvisko"]);
             string cislo = (values["cislo"]);
-            //DateTime datum = (values["datum"]);
+            DateTime datum = DateTime.Parse(values["datum"]);
+            
             string sluzba = (values["sluzba"]);
 
             Kozmetika kozmetika = new Kozmetika();
             kozmetika.Meno = meno;
             kozmetika.Priezvisko = priezvisko;
             kozmetika.Cislo = cislo;
-            //kozmetika.Datum = datum;
+            kozmetika.Datum = datum;
+            
             kozmetika.Sluzba = sluzba;
 
             _context.Add(kozmetika);
