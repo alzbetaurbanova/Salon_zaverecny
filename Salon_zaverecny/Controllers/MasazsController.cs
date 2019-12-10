@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -64,6 +65,28 @@ namespace Salon_zaverecny.Controllers
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Formular(IFormCollection values)
+        {
+            string meno = (values["meno"]);
+            string priezvisko = (values["priezvisko"]);
+            string cislo = (values["cislo"]);
+            DateTime datum = DateTime.Parse(values["sluzba"]);
+            string sluzba = (values["sluzba"]);
+
+            Masaz masaz = new Masaz();
+            masaz.Meno = meno;
+            masaz.Priezvisko = priezvisko;
+            masaz.Cislo = cislo;
+            masaz.Datum = datum;
+            masaz.Sluzba = sluzba;
+            
+            _context.Add(masaz);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Podakovanie));
+        }
+
         // POST: Masazs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -75,7 +98,7 @@ namespace Salon_zaverecny.Controllers
             {
                 _context.Add(masaz);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Podakovanie));
             }
             return View(masaz);
         }
