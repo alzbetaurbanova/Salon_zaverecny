@@ -73,15 +73,13 @@ namespace Salon_zaverecny.Controllers
             string priezvisko = (values["priezvisko"]);
             string cislo = (values["cislo"]);
             DateTime datum = DateTime.Parse(values["datum"]);
-            //string hodina = (values["hodina"]);
             string sluzba = (values["sluzba"]);
 
-           Kadernictvo kadernictvo = new Kadernictvo();
+            Kadernictvo kadernictvo = new Kadernictvo();
             kadernictvo.Meno = meno;
             kadernictvo.Priezvisko = priezvisko;
             kadernictvo.Cislo = cislo;
             kadernictvo.Datum = datum;
-            //kozmetika.hodina = hodina;
             kadernictvo.Sluzba = sluzba;
 
             _context.Add(kadernictvo);
