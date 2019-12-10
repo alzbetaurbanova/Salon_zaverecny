@@ -73,7 +73,6 @@ namespace Salon_zaverecny.Controllers
             string priezvisko = (values["priezvisko"]);
             string cislo = (values["cislo"]);
             DateTime datum = DateTime.Parse(values["datum"]);
-            
             string sluzba = (values["sluzba"]);
 
             Kozmetika kozmetika = new Kozmetika();
