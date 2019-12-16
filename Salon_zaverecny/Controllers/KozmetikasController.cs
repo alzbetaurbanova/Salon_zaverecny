@@ -80,7 +80,6 @@ namespace Salon_zaverecny.Controllers
             kozmetika.Priezvisko = priezvisko;
             kozmetika.Cislo = cislo;
             kozmetika.Datum = datum;
-            
             kozmetika.Sluzba = sluzba;
 
             _context.Add(kozmetika);

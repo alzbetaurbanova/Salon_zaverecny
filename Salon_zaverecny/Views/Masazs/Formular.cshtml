@@ -7,61 +7,143 @@
 <br />
 <br />
 
-<form action="" method="post">
+<form asp-controller="Masazs" asp-action="Formular" method="post">
+
     <div class="form-group row">
-        <div class="col-sm-3">
-            <input name="meno" class="form-control" type="text" placeholder="Meno"><br />
-        </div>
-        <div class="col-sm-3">
-            <input name="priezvisko" class="form-control" type="text" placeholder="Priezvisko"><br />
-        </div>
-    </div><br />
-    Kontakt:<br /><br />
-    <div class="form-group row">
-        <div class="col-sm-4">
-            <input name="telcislo" type="tel" class="form-control" id="telcislo" placeholder="Telefónne číslo">
-        </div>
-    </div><br />
-    <div class="row">
-        <div class="col-sm-5">
-            Služba:<br />
-        </div>
-        <div class="col-sm-2">
-            Hodina<br />
-        </div>
-    </div><br />
-    <div class="row">
-        <div class="col-sm-5">
-            <select class="form-control">
-                <option>Klasická relaxačná masáž 30 minút</option>
-                <option>Klasická relaxačná masáž 60 minút</option>
-                <option>Celotelová masáž</option>
-                <option>Reflexná masáž chodidiel</option>
-                <option>Masáž chrbta + chodidiel</option>
-                <option>Aromaterapeutická masáž</option>
-                <option>Banková masáž</option>
-                <option>Medová detoxikačná masáž</option>
-                <option>Masáž hlavy</option>
-            </select>
-        </div><br />
-        <div class="col-sm-2">
-            <select class="form-control form-control-sm">
-                <option>9:00</option>
-                <option>10:00</option>
-                <option>11:00</option>
-                <option>13:00</option>
-                <option>14:00</option>
-                <option>15:00</option>
-                <option>16:00</option>
-            </select>
-        </div>
-        <br /><br />
-        <div class="form-group row">
+        <input name="meno" class="form-control" type="text" placeholder="Meno">
+        <input name="priezvisko" class="form-control" type="text" placeholder="Priezvisko">
+        <input name="cislo" class="form-control" type="text" placeholder="Číslo">
+    </div>
+    <fieldset class="form-group">
+        <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Služba</legend>
             <div class="col-sm-10">
-                <button type="submit" class="btn btn-primary" asp-area="" asp-controller="Masazs" asp-action="Podakovanie">Odoslať objednávku</button>
-                @*<a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Odoslať objednávku</a>*@
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios1" value="option1" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                        Klasická relaxačná masáž 30 minút
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios2" value="option2">
+                    <label class="form-check-label" for="gridRadios2">
+                        Klasická relaxačná masáž 60 minút
+                    </label>
+                </div>
+                <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios3" value="option3">
+                    <label class="form-check-label" for="gridRadios3">
+                        Celotelová masáž
+                    </label>
+                </div>
+                <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios3" value="option3">
+                    <label class="form-check-label" for="gridRadios4">
+                        Reflexná masáž chodidiel
+                    </label>
+                </div>
+                <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios3" value="option3">
+                    <label class="form-check-label" for="gridRadios5">
+                        Masáž chrbta + chodidiel
+                    </label>
+                </div>
+                <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios3" value="option3">
+                    <label class="form-check-label" for="gridRadios6">
+                        Aromaterapeutická masáž
+                    </label>
+                </div>
+                <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios3" value="option3">
+                    <label class="form-check-label" for="gridRadios7">
+                        Banková masáž
+                    </label>
+                </div>
+                <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios3" value="option3">
+                    <label class="form-check-label" for="gridRadios8">
+                        Medová detoxikačná masáž
+                    </label>
+                </div>
+                <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios3" value="option3">
+                    <label class="form-check-label" for="gridRadios9">
+                        Masáž hlavy
+                    </label>
+                </div>
             </div>
+        </div>
+    </fieldset>
+
+    <div style="overflow:hidden;">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-8">
+                        <input name="datum" id="datetimepicker12">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    <br /><br />
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Odoslať objednávku</button>
         </div>
     </div>
 </form>
+@*<form asp-area="" asp-controller="Masazs" asp-action="Index" method="post">
+        <div class="form-group row">
+            <div class="col-sm-3">
+                <input name="meno" class="form-control" type="text" placeholder="Meno"><br />
+            </div>
+            <div class="col-sm-3">
+                <input name="priezvisko" class="form-control" type="text" placeholder="Priezvisko"><br />
+            </div>
+        </div><br />
+        Kontakt:<br /><br />
+        <div class="form-group row">
+            <div class="col-sm-4">
+                <input name="telcislo" type="tel" class="form-control" id="telcislo" placeholder="Telefónne číslo">
+            </div>
+        </div><br />
+        <div class="row">
+            <div class="col-sm-5">
+                Služba:<br />
+            </div>
+            <div class="col-sm-2">
+                Hodina<br />
+            </div>
+        </div><br />
+        <div class="row">
+            <div class="col-sm-5">
+                <select name="sluzby" class="form-control">
+                    <option>Klasická relaxačná masáž 30 minút</option>
+                    <option>Klasická relaxačná masáž 60 minút</option>
+                    <option>Celotelová masáž</option>
+                    <option>Reflexná masáž chodidiel</option>
+                    <option>Masáž chrbta + chodidiel</option>
+                    <option>Aromaterapeutická masáž</option>
+                    <option>Banková masáž</option>
+                    <option>Medová detoxikačná masáž</option>
+                    <option>Masáž hlavy</option>
+                </select>
+            </div><br />
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="control-label" for="date">Dátum</label>
+                    <input class="form-control" id="datum" name="datum" placeholder="MM/DD/YYY" type="text" />
+                </div>
+            </div>
+            <br /><br />
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary" >Odoslať objednávku</button>
+                </div>
+            </div>
+        </div>
+    </form>*@
 
