@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -67,12 +68,14 @@ namespace Salon_zaverecny.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+
+        
         public async Task<IActionResult> Formular(IFormCollection values)
         {
             string meno = (values["meno"]);
             string priezvisko = (values["priezvisko"]);
             string cislo = (values["cislo"]);
-            DateTime datum = DateTime.Parse(values["sluzba"]);
+            DateTime datum = DateTime.Parse(values["datum"]);
             string sluzba = (values["sluzba"]);
 
             Masaz masaz = new Masaz();
@@ -86,6 +89,7 @@ namespace Salon_zaverecny.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Podakovanie));
         }
+        
 
         // POST: Masazs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
