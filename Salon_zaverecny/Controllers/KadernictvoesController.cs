@@ -87,6 +87,8 @@ namespace Salon_zaverecny.Controllers
             _context.Add(kadernictvo);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Podakovanie));
+
+
         }
 
         // POST: Kadernictvoes/Create
