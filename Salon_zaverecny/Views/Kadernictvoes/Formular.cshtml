@@ -9,71 +9,82 @@
 
 <form asp-area="" asp-controller="Kadernictvoes" asp-action="Formular" method="post">
     <div class="form-group row">
-        <input name="meno" class="form-control" type="text" placeholder="Meno">
-        <input name="priezvisko" class="form-control" type="text" placeholder="Priezvisko">
-        <input name="cislo" class="form-control" type="text" placeholder="Číslo">
+        <div class="col-sm-3">
+            <input name="meno" class="form-control" type="text" placeholder="Meno">
+        </div>
+        <div class="col-sm-3">
+            <input name="priezvisko" class="form-control" type="text" placeholder="Priezvisko">
+        </div>
     </div>
+    <div class="form-group row">
+        <div class="col-sm-3">
+            <input name="cislo" class="form-control" type="text" placeholder="Tel. číslo">
+        </div>
+    </div>
+    <br />
     <fieldset class="form-group">
         <div class="row">
-            <legend class="col-form-label col-sm-2 pt-0">Služba</legend>
-            <div class="col-sm-10">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios1" value="damskystrih" checked>
-                    <label class="form-check-label" for="gridRadios1">
-                        Dámsky strih
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios2" value="panskystrih">
-                    <label class="form-check-label" for="gridRadios2">
-                        Pánsky strih
-                    </label>
-                </div>
-                <div class="form-check disabled">
-                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios3" value="detskystrih">
-                    <label class="form-check-label" for="gridRadios3">
-                        Detský strih
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios2" value="farbenie">
-                    <label class="form-check-label" for="gridRadios2">
-                        Farbenie
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios2" value="melir">
-                    <label class="form-check-label" for="gridRadios2">
-                        Melír
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios2" value="svadobnyuces">
-                    <label class="form-check-label" for="gridRadios2">
-                        Svadobný účes
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios2" value="spolocenskyuces">
-                    <label class="form-check-label" for="gridRadios2">
-                        Spoločenský účes
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios2" value="predlzovanievlasov">
-                    <label class="form-check-label" for="gridRadios2">
-                        Predlžovanie vlasov
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sluzba" id="gridRadios2" value="zahustovanie">
-                    <label class="form-check-label" for="gridRadios2">
-                        Zahusťovanie
-                    </label>
+            <div class="col-sm-5">
+                <legend>Služba</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sluzba" id="gridRadios1" value="damskystrih" checked>
+                        <label class="form-check-label" for="gridRadios1">
+                            Dámsky strih
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sluzba" id="gridRadios2" value="panskystrih">
+                        <label class="form-check-label" for="gridRadios2">
+                            Pánsky strih
+                        </label>
+                    </div>
+                    <div class="form-check disabled">
+                        <input class="form-check-input" type="radio" name="sluzba" id="gridRadios3" value="detskystrih">
+                        <label class="form-check-label" for="gridRadios3">
+                            Detský strih
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sluzba" id="gridRadios2" value="farbenie">
+                        <label class="form-check-label" for="gridRadios2">
+                            Farbenie
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sluzba" id="gridRadios2" value="melir">
+                        <label class="form-check-label" for="gridRadios2">
+                            Melír
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sluzba" id="gridRadios2" value="svadobnyuces">
+                        <label class="form-check-label" for="gridRadios2">
+                            Svadobný účes
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sluzba" id="gridRadios2" value="spolocenskyuces">
+                        <label class="form-check-label" for="gridRadios2">
+                            Spoločenský účes
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sluzba" id="gridRadios2" value="predlzovanievlasov">
+                        <label class="form-check-label" for="gridRadios2">
+                            Predlžovanie vlasov
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sluzba" id="gridRadios2" value="zahustovanie">
+                        <label class="form-check-label" for="gridRadios2">
+                            Zahusťovanie
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
-    </fieldset>
+    </fieldset><br /><br />
     <div style="overflow:hidden;">
         <div class="form-group">
             <div class="row">
