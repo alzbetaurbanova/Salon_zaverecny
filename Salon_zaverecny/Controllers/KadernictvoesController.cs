@@ -20,7 +20,8 @@ namespace Salon_zaverecny.Controllers
         {
             _context = context;
         }
-       
+
+        [Authorize]
         // GET: Kadernictvoes
         public async Task<IActionResult> Index()
         {
@@ -45,7 +46,7 @@ namespace Salon_zaverecny.Controllers
             return View(kadernictvo);
         }
 
-        [Authorize]
+      
         // GET: Kadernictvoes/Create
         public IActionResult Create()
         {
